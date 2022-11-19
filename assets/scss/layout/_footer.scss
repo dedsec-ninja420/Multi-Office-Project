@@ -1,0 +1,71 @@
+#footer {
+    width: 100%;
+    font-family: 'Mulish', sans-serif;
+    h3 {
+        font-family: 'Jost', sans-serif;
+        @include toRem(font-size, 25);
+    }
+    .col-md-5 {
+        background-color: darken($color: $darkGray, $amount: 5%);
+        .container-fluid {
+            width: 80%;
+            img {
+                @include toRem(width, 130);
+            }
+            .social-icons {
+                & > *:hover {
+                    cursor: pointer;
+                }
+                .fa-facebook {
+                    color: $yellow;
+                }
+                .fa-square-twitter {
+                    color: $blue;
+                }
+                .fa-pinterest {
+                    color: #fff;
+                }
+            }
+            .input-group {
+                input, button {
+                    background-color: darken($color: $darkGray, $amount: 5%);
+                    border: 1px solid $gray;
+                    border-radius: 1px;
+                    color: #fff;
+                    font-weight: 300;
+                }
+                button {
+                    border-left: none;
+                    &:active {
+                        border-left: none;
+                    }
+                }
+            }
+            p {
+                color: #CCC;
+                @include toRem(font-size, 16);
+                font-weight: 300;
+            }
+        }
+    }
+    .col-md-3, .col-md-4 {
+        background-color: $darkGray;
+        font-weight: 400;
+        h3 {
+            font-weight: 300;
+            color: #fff;
+        }
+        p, ul {
+            @include toRem(font-size, 16);
+            font-weight: 200;
+            color: #ccc;
+        }
+
+        ul {
+            list-style-type: none;
+            li:before {
+                content: "-";
+            }
+        }
+    }
+}

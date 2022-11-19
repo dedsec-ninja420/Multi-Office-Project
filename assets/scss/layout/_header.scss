@@ -1,0 +1,36 @@
+#header {
+    @include toRem(height, 100);
+    position: absolute;
+    z-index: 2;
+    .navbar-collapse {
+        width: 100%;
+    }
+    .nav-item {
+        .active, &:hover {
+            opacity: 0.5;
+        }
+        .nav-link {
+            @include toRem(font-size, 16);
+            color: #fff;
+            font-weight: 300;
+        }
+    }
+    @media (max-width: 991px) {
+        position: static;
+        height: 100%;
+        z-index: 0;
+        background-color: #fff;
+        .navbar-collapse {
+            background-color: #fff;
+            z-index: 99;
+        }
+        .nav-item {
+            .nav-link {
+                color: black;
+            }
+        }
+        button:last-child {
+            display: none;
+        }
+    }
+}

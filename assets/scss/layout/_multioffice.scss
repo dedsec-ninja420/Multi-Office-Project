@@ -1,0 +1,31 @@
+#multioffice {
+    height: auto;
+    .row {
+        height: inherit;
+        .col-md-6 {
+            height: 100vh;
+        }
+        .col-md-6:first-of-type {
+            background-image: url("../images/multioffice.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .col-md-6:last-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: $darkGray;
+            p:first-of-type {
+                color: $red;
+                letter-spacing: 0.3em;
+                @include toRem(font-size, 11);
+            }
+            h1 {
+                color: white;
+                @include toRem(font-size, 34);
+            }
+        }
+    }
+}

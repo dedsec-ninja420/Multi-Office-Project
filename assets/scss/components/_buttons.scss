@@ -1,0 +1,11 @@
+.btn {
+    padding: 14px 24px;
+    @include toRem(font-size, 16);
+    border: none;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+    background-color: $blue;
+    &:hover {
+        background-color: lighten($color: $blue, $amount: 10%);
+    }
+}

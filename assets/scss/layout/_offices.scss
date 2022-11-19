@@ -1,0 +1,41 @@
+#offices {
+    .row {
+        .col-md-3:first-of-type {
+            p:first-of-type {
+                color: $red;
+                text-transform: uppercase;
+                letter-spacing: 0.3em;
+                @include toRem(font-size, 11);
+            }
+            h3 {
+                @include toRem(font-size, 34);
+                font-weight: 400;
+                color: #000;
+            }
+            p:last-child {
+                color: $gray;
+                font-weight: 300;
+            }
+        }
+        .card {
+            border: none;
+            padding: 0;
+            .card-img-top {
+                border-radius: 0;
+            }
+            .card-body {
+                background-color: $lightGray;
+                .card-title {
+                    color: #000;
+                    font-weight: 500;
+                }
+                .card-text {
+                    color: $gray;
+                    text-transform: uppercase;
+                    @include toRem(font-size, 11);
+                    letter-spacing: 0.3em;
+                }
+            }
+        }
+    }
+}
